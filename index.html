@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>💬 Global Chat - Личные сообщения</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Боковая панель -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <h1>💬 Global Chat</h1>
+                <p>Личные сообщения</p>
+            </div>
+            
+            <div class="user-info">
+                <div class="avatar" id="userAvatar">👤</div>
+                <div class="user-details">
+                    <input type="text" id="username" placeholder="Ваше имя" maxlength="20">
+                    <button id="setUsername" class="btn-small">Войти</button>
+                </div>
+            </div>
+            
+            <div class="status" id="status">
+                <span class="status-dot"></span>
+                <span>Офлайн</span>
+            </div>
+            
+            <div class="chats-list">
+                <h3>💬 Чаты</h3>
+                <div id="chatsList" class="chats-container"></div>
+            </div>
+            
+            <div class="online-users">
+                <h3>👥 Онлайн (<span id="onlineCount">0</span>)</h3>
+                <div id="onlineUsers" class="users-container"></div>
+            </div>
+        </div>
+        
+        <!-- Основная область чата -->
+        <div class="chat-area">
+            <div class="chat-header" id="chatHeader">
+                <div class="chat-info">
+                    <h2 id="chatTitle">Выберите чат</h2>
+                    <p id="chatStatus"></p>
+                </div>
+                <button id="clearChat" class="btn-clear" style="display: none;">🗑️ Очистить</button>
+            </div>
+            
+            <div class="messages-container" id="messages">
+                <div class="welcome-message">
+                    <p>✨ Добро пожаловать в Global Chat!</p>
+                    <p>💬 Выберите пользователя для личного сообщения</p>
+                    <p>🌍 Или пишите в общий чат</p>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="message-input-wrapper">
+                    <button id="emojiBtn" class="emoji-button">😊</button>
+                    <input type="text" id="messageInput" placeholder="Введите сообщение..." disabled>
+                    <button id="sendBtn" disabled>📤 Отправить</button>
+                </div>
+                <div class="typing-indicator" id="typingIndicator"></div>
+            </div>
+        </div>
+        
+        <!-- Панель эмодзи -->
+        <div class="emoji-panel" id="emojiPanel">
+            <div class="emoji-grid">
+                😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 😍 😘 😗 😙 😚 😋 😛 😜 😝 😐 😶 😐 😑 😏 😒 😓 😔 😕 😖 😘
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
